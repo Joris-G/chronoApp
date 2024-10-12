@@ -1,5 +1,9 @@
-<a mat-button [routerLink]="'/'">Accueil</a>
-<button mat-button [routerLink]="'/Part'">Pièces</button>
-<button mat-button disabled>Chrono</button>
-<button mat-button disabled>Stats</button>
-<a disabled mat-button href="https://www.google.com/" target="_blank">Link</a>
+<nav>
+  <a mat-button [routerLink]="'/'">Accueil</a>
+  <button mat-button [routerLink]="'/piece'" routerLinkActive="active">
+    Pièces
+  </button>
+  <button mat-button disabled>Chrono</button>
+  <button mat-button disabled>Stats</button>
+  <a disabled mat-button href="https://www.google.com/" target="_blank">Link</a>
+</nav>
