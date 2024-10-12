@@ -32,3 +32,13 @@ form {
 button.active {
   color: red !important;
 }
+
+.jwd-layout-left-separator {
+  border-right: 2px solid #d3d3d3;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.jwd-layout-bottom-separator {
+  border-bottom: 2px solid #d3d3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
