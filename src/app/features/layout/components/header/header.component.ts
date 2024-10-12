@@ -7,7 +7,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   standalone: true,
   imports: [MenuComponent, MatToolbarModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrl: './header.component.scss',
+  host: {
+    'class': 'jwd-layout-bottom-separator'
+  }
 })
 export class HeaderComponent {
 
