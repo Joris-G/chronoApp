@@ -11,7 +11,7 @@ export const routes: Routes = [
         component: HomePage
     },
     {
-        path: 'part',
+        path: 'piece',
         pathMatch: 'full',
         component: PartPage
     },
