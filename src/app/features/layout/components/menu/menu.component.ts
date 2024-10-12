@@ -7,7 +7,8 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [RouterModule, MatButtonModule],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+  styleUrl: './menu.component.scss',
+
 })
 export class MenuComponent {
 

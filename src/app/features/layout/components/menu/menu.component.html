@@ -3,7 +3,14 @@
   <button mat-button [routerLink]="'/piece'" routerLinkActive="active">
     Pièces
   </button>
-  <button mat-button disabled>Chrono</button>
+  <button
+    mat-button
+    [routerLink]="'/chrono'"
+    routerLinkActive="active"
+    disabled
+  >
+    Chrono
+  </button>
   <button mat-button disabled>Stats</button>
   <a disabled mat-button href="https://www.google.com/" target="_blank">Link</a>
 </nav>
