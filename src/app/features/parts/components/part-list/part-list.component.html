@@ -1,0 +1,14 @@
+<div mat-subheader>Liste des pièces</div>
+@for (item of partList$$() ; track $index) {
+
+<mat-list>
+  <mat-list-item>
+    <mat-icon matListItemIcon>folder</mat-icon>
+    <div matListItemTitle>{{ item.designation }}</div>
+    <div matListItemLine>{{ item.partNumber }}</div>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+}@empty {
+<p>Aucune pièce trouvée</p>
+}

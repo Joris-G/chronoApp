@@ -1,0 +1,43 @@
+<!-- TODO créer une directive pour les titre sous titre etc... -->
+<!-- <mat-card> -->
+<div class="mat-title-medium" mat-dialog-title>Création d'une pièce</div>
+@if(isSaving()) {
+<mat-spinner></mat-spinner>
+}@else {
+<form mat-dialog-content [formGroup]="partForm" (ngSubmit)="onSubmitClick()">
+  <mat-form-field>
+    <mat-label for="partNumber">PART NUMBER</mat-label
+    ><input
+      matInput
+      id="partNumber"
+      type="text"
+      aria-label="part number"
+      formControlName="partNumber"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="designation">DESIGNATION</mat-label
+    ><input
+      matInput
+      id="designation"
+      type="text"
+      aria-label="part number"
+      formControlName="designation"
+    />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label for="project">PROJET</mat-label
+    ><input
+      matInput
+      id="project"
+      type="text"
+      aria-label="project"
+      formControlName="project"
+    />
+  </mat-form-field>
+  <button mat-raised-button type="submit" [disabled]="!partForm.valid">
+    CREER
+  </button>
+</form>
+}
+<!-- </mat-card> -->
