@@ -1,0 +1,22 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem;
+  color: var(--color-primary);
+  border-bottom: 0.02rem solid var(--color-primary);
+}
+
+.menu-item:hover {
+  background-color: var(--color-primary);
+  color: var(--color-hover-selected);
+}
+
+.menu-item.menu-item-active {
+  color: var(--color-warn);
+}

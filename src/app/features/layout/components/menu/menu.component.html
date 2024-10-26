@@ -1,16 +1,22 @@
 <nav>
-  <a mat-button [routerLink]="'/'">Accueil</a>
-  <button mat-button [routerLink]="'/piece'" routerLinkActive="active">
-    Pièces
-  </button>
-  <button
-    mat-button
-    [routerLink]="'/chrono'"
-    routerLinkActive="active"
-    disabled
+  <app-toggle-menu></app-toggle-menu>
+  @for (menuItem of menuItems; track $index) {
+
+  <div
+    [routerLink]="menuItem.path"
+    class="menu-item"
+    routerLinkActive="menu-item-active"
   >
-    Chrono
-  </button>
-  <button mat-button disabled>Stats</button>
-  <a disabled mat-button href="https://www.google.com/" target="_blank">Link</a>
+    <mat-icon [fontIcon]="menuItem.icon"></mat-icon>
+    @if(isMenuOpen()){
+    <span>{{ menuItem.label }}</span>
+    }
+  </div>
+  <!-- <p-menu
+    [routerLink]="menuItem.path"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    > -->
+
+  }
 </nav>
