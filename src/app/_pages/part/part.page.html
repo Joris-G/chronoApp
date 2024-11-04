@@ -1,5 +1,7 @@
-<app-part-list-container></app-part-list-container>
-<app-single-part></app-single-part>
-<button mat-button (click)="openPartCreationDialog()">
-  <mat-icon fontIcon="add"></mat-icon>Ajouter
-</button>
+<app-part-commands></app-part-commands>
+<app-content>
+  <router-outlet></router-outlet>
+  <!-- <app-step-analyse></app-step-analyse> -->
+</app-content>
+
+<!-- <app-part-creation></app-part-creation> -->
