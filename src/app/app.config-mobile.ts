@@ -24,5 +24,4 @@ export const appConfig: ApplicationConfig = {
       }
     }
   ]
-
 };

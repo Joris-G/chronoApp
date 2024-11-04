@@ -1,6 +1,6 @@
 import { Observable } from "rxjs";
 
-export interface CRUD<T> extends GetAll<T>, GetOne<T>, CreateOne<T>, DeleteOne<T>, UpdateOne<T> {
+export interface CRUD<T> extends GetAll<T>, GetOne<T>, CreateOne<T>, DeleteOne, UpdateOne<T> {
 
 }
 
@@ -35,8 +35,8 @@ export interface UpdateOne<T> {
 /**
 *
 */
-export interface DeleteOne<T> {
-    deleteOne(id: string): Observable<T>;
+export interface DeleteOne {
+    deleteOne(id: string): Observable<void>;
 }
 /**
  *

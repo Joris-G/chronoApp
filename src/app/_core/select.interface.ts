@@ -1,0 +1,1 @@
+export type FilterOptions = { [key: string]: Set<any> };

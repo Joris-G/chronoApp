@@ -1,6 +1,17 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import { Component, ComponentRef, Type } from '@angular/core';
 
-bootstrapApplication(AppComponent, appConfig)
+function definedRootComponent() {
+  if (window.screen.availWidth > 1000) {
+    console.log(window.screen.availWidth);
+
+    return AppComponent;
+  }
+  return AppComponent;
+}
+
+bootstrapApplication(definedRootComponent(), appConfig)
   .catch((err) => console.error(err));
+

@@ -6,7 +6,7 @@
 }
 
 :root {
-  --font-size: 12px;
+  --font-size: 8px;
   --font-family: Roboto;
   --layout-component-padding: 1rem;
   --color-warn: #e84c23;
@@ -19,7 +19,7 @@ body {
   font-family: var(--font-family);
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: aliceblue;
+  background-color: var(--color-hover-selected);
   color: var(--color-primary);
 }
 
