@@ -1,0 +1,13 @@
+@if (chronoList().length>0) {
+<mat-list>
+  @for (chrono of chronoList(); track $index) {
+  <mat-list-item>
+    <div>Date début : {{ chrono.startDate | date : "dd MMM yyyy" }}</div>
+    <div>Date fin : {{ chrono.endDate | date : "dd MMM yyyy" }}</div>
+    <div>Temps total : {{ chrono.totalDuration }}</div>
+  </mat-list-item>
+  }
+</mat-list>
+}@else {
+<p>Pas d'élément à afficher</p>
+}

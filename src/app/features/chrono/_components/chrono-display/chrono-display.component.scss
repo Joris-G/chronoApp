@@ -1,0 +1,43 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.chrono-display {
+  // width: 280px;
+  padding: calc(var(--layout-component-padding) * 2);
+  background-color: #000; /* Fond noir mat, comme les montres digitales */
+  border-radius: 1rem;
+  border: 0.5rem solid #00ff00; /* Bordure verte néon */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5); /* Légère lueur verte */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+
+  font-size: 2em;
+  font-family: "Digital-7", "Courier New", Courier, monospace; /* Police digitale */
+  color: #00ff00; /* Couleur d'affichage verte néon */
+  text-align: center;
+}
+
+.time {
+  // display: flex;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+// button {
+//   margin-top: 20px;
+//   font-size: 1.1em;
+//   background-color: #00ff00;
+//   color: #000;
+//   transition: background-color 0.3s;
+//   border-radius: 4px;
+// }
+
+// button:hover {
+//   background-color: #00e600; /* Couleur un peu plus foncée au survol */
+// }

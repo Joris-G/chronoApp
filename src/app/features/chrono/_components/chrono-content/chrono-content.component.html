@@ -1,0 +1,7 @@
+@if(isPartSelected()){
+<app-chrono-list [chronoList]="partChronos"></app-chrono-list>
+<app-chrono-commands></app-chrono-commands>
+<app-chrono-display></app-chrono-display>
+}@else {
+<app-part-list (selectedPart)="partSelected($event)"></app-part-list>
+}
