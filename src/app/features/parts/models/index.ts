@@ -1,9 +1,12 @@
 export interface Part {
-    id: number
+    id: string
     designation: string
     partNumber: string
     chronoList?: ChronoList
+    project?: string | undefined
 }
+
+export type CreatePartPayload = Omit<Part, 'id'>
 
 export type PartList = Part[]
 export type ChronoList = PartChrono[]

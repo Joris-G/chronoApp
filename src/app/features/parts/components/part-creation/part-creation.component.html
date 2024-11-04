@@ -1,6 +1,10 @@
 <!-- TODO créer une directive pour les titre sous titre etc... -->
 <!-- <mat-card> -->
-<div class="mat-title-medium" mat-dialog-title>Création d'une pièce</div>
+<div class="mat-title-large">Description de la pièce</div>
+<button mat-fab extended (click)="toggleEditingMode()">
+  <mat-icon>edit</mat-icon>
+  {{ isEditing() ? "En mode édition" : "Éditer" }}
+</button>
 @if(isSaving()) {
 <mat-spinner></mat-spinner>
 }@else {
@@ -36,8 +40,9 @@
     />
   </mat-form-field>
   <button mat-raised-button type="submit" [disabled]="!partForm.valid">
-    CREER
+    ENREGISTRER
   </button>
 </form>
 }
 <!-- </mat-card> -->
+<!--  -->

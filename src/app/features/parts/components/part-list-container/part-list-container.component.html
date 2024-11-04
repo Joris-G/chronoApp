@@ -1,2 +1,8 @@
-<app-part-list-filter></app-part-list-filter>
-<app-part-list></app-part-list>
+<app-part-list-filter
+  [filters]="partFilters()"
+  (selectionChange)="handleSelectionChange($event)"
+></app-part-list-filter>
+<app-part-list
+  [partList]="partList$$()"
+  (selectedPart)="partSelectedAction($event)"
+></app-part-list>

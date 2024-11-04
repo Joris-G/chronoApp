@@ -1,8 +1,11 @@
+<app-back-button></app-back-button>
 <button
   mat-raised-button
   color="warn"
-  (click)="openPartCreationDialog()"
   [routerLink]="['create']"
+  routerLinkActive="active"
 >
   <mat-icon fontIcon="add"></mat-icon>Nouvelle
 </button>
+
+<!-- (click)="openPartCreationDialog()" -->

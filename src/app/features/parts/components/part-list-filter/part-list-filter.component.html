@@ -1,1 +1,30 @@
-<p>part-list-filter works!</p>
+<div mat-subheader>Filtres</div>
+@for (filter of filterEntries(); track $index) {
+
+<mat-form-field>
+  <mat-label>{{ filter[0] | titlecase }}</mat-label>
+  <mat-select
+    #select
+    multiple
+    [id]="filter[0]"
+    (selectionChange)="onSelectionChange($event.value, select.id)"
+  >
+    @for (option of filter[1]; track $index) {
+    <mat-option [value]="option">{{ option }}</mat-option>
+
+    }
+  </mat-select>
+  @if ( select.value?.length) {
+
+  <button
+    mat-icon-button
+    matSuffix
+    (click)="clearClick(select, select.id)"
+    aria-label="Clear selection"
+  >
+    <mat-icon>clear</mat-icon>
+  </button>
+  }
+</mat-form-field>
+
+}
